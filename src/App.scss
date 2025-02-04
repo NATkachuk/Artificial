@@ -1,0 +1,12 @@
+@use "./scss/mixins";
+@use "./scss/vars";
+@use "./scss/reset";
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300..800&display=swap');
+
+body{
+  background-color: vars.$bg-color;
+  .block{
+    background-color: vars.$second-bg-color;
+  }
+}
