@@ -1,0 +1,14 @@
+@use "../../../scss/mixins";
+@use "../../../scss/vars";
+@use "../../../scss/reset";
+
+.nav{
+    @include mixins.Flex(row, center, center, 0);
+    &__list{
+        @include mixins.Flex(row, center, center, 40px);
+    }
+    &__link{
+        color: vars.$text-color;
+        @include mixins.OpenSans(16px, 600, 22px);
+    }
+}

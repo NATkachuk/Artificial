@@ -1,13 +1,16 @@
 
 import './App.scss'
+import Footer from './components/footer/Footer'
+import Header from './components/header/header.Jsx'
+import Main from './components/main/Main'
 
 function App() {
 
   return (
     <>
-      <div className="block">
-        <p>123456</p>
-      </div>
+      <Header />
+      <Main/>
+      <Footer />
     </>
   )
 }

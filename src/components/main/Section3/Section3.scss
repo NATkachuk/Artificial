@@ -1,0 +1,26 @@
+@use "../../../scss/mixins";
+@use "../../../scss/reset";
+@use "../../../scss/vars";
+
+.section3{
+    @include mixins.Flex(column, center, center, 170px);
+    &-img{
+        width: 31%;
+    }
+    &-container{
+        @include mixins.Flex(row, center, center, 170px);
+        .section3-textbox{
+            @include mixins.Flex(column, center, flex-start, 30px);
+            width: 29%;
+            &__title{
+                @include mixins.OpenSans(40px,700,130%);
+                color:vars.$text-color;
+            }
+            &__text{
+                @include mixins.OpenSans(16px,600,160%);
+                color:vars.$text-color;
+                opacity: 0.7;
+            }
+        }
+    }
+}

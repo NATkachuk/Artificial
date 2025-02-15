@@ -1,0 +1,50 @@
+@use "../../scss/mixins";
+@use "../../scss/vars";
+@use "../../scss/reset";
+
+.footer{
+    padding: 160px 200px;
+
+    @include mixins.Flex(row, center, center, 40px);
+    &-container{
+        @include mixins.Flex(column, center, flex-start, 37px);
+        &__box{
+            @include mixins.Flex(column, center, flex-start, 30px);
+            &-img{
+                width: 30%;
+            }
+            &-text1{
+                color:vars.$button-color;
+                @include mixins.OpenSans(16px, 600, 22px);
+            }
+            &-text2{
+                color:vars.$text-color;
+                @include mixins.OpenSans(14px, 400, 18px);
+                opacity: 0.6;
+            }
+        }
+        &__box1{
+            @include mixins.Flex(column, center, flex-start, 20px);
+            &-cont{
+                @include mixins.Flex(row, center, flex-start, 9px);
+                &-link{
+                    color:vars.$text-color;
+                    @include mixins.OpenSans(14px, 500, 18px);
+
+                }
+            }
+        }
+        
+    }
+    .footer-list{
+        @include mixins.Flex(column, center, flex-start, 20px);
+        &__title{
+            color:vars.$button-color;
+            @include mixins.OpenSans(23px, 600, 31px);
+        }
+        &__link{
+            color:vars.$text-color;
+            @include mixins.OpenSans(14px, 500, 18px);
+        }
+    }
+}

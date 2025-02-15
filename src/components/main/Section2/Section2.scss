@@ -1,0 +1,51 @@
+@use "../../../scss/mixins";
+@use "../../../scss/reset";
+@use "../../../scss/vars";
+
+.section2{
+    @include mixins.Flex(column, center, center, 170px);
+    &-container{
+        @include mixins.Flex(row, center, center, 68px);
+        &__img{
+            width: 31%;
+        }
+        .section2-box{
+            @include mixins.Flex(column, center, flex-start, 30px);
+            width: 29%;
+            &__title{
+                color:vars.$text-color;
+                @include mixins.OpenSans(40px,700,130%);
+            }
+            &__text{
+                @include mixins.OpenSans(16px,600,160%);
+                color:vars.$text-color;
+                opacity: 0.7;
+            }
+            &__btn{
+                color:vars.$text-color;
+                background-color: vars.$button-color;
+                padding: 15px 30px;
+                border-radius: 5px;
+                @include mixins.OpenSans(16px,600,22px);
+            }
+        }
+    }
+    &-container2{
+        @include mixins.Flex(row, center, center, 70px);
+        .section2-box{
+            @include mixins.Flex(column, center, center, 30px);
+            padding-top: 20px;
+            width: 23%;
+            background-color: #011935;
+            &__text1{
+                color:vars.$text-color;
+                @include mixins.OpenSans(25px,700,125%);
+            }
+            &__text2{
+                @include mixins.OpenSans(16px,600,160%);
+                color:vars.$text-color;
+                opacity: 0.7;
+            }
+        }
+    }
+}

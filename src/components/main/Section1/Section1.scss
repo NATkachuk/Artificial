@@ -1,0 +1,56 @@
+@use "../../../scss/mixins";
+@use "../../../scss/reset";
+@use "../../../scss/vars";
+
+.section1{
+    &-container{
+        @include mixins.Flex(row,center,center,114px);
+        .section1-box{
+            @include mixins.Flex(row,center,center,114px);
+            &__cont{
+                @include mixins.Flex(column,center,flex-start,40px);
+                width: 50%;
+                &-textbox{
+                    @include mixins.Flex(column,center,flex-start,10px);
+                    &-text{
+                        color:vars.$button-color;
+                        @include mixins.OpenSans(18px,600,160%);
+                    }
+                    &-title{
+                        color:vars.$text-color;
+                        @include mixins.OpenSans(55px,800,130%);
+                    }
+                }
+                &-text{
+                    color:vars.$text-color;
+                    @include mixins.OpenSans(18px,600,160%);
+                    opacity: 0.7;
+                }
+                &-btns{
+                    @include mixins.Flex(row,center,center,20px);
+                    &-btn1{ 
+                        color:vars.$text-color;
+                        background-color: vars.$button-color;
+                        padding: 15px 30px;
+                        border-radius: 5px;
+                        @include mixins.OpenSans(16px,600,22px);
+                    }
+                    &-btn2{
+                        color:vars.$text-color;
+                        background-color: vars.$button-color;
+                        padding: 15px 30px;
+                        border-radius: 5px;
+                        @include mixins.OpenSans(16px,600,22px);
+                    }
+                }
+            }
+        }
+        &__img{
+            width: 31%;
+        }
+    }
+    &-container2{
+        margin-top: 60px;
+        @include mixins.Flex(row,center,center,70px);
+    }
+}

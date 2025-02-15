@@ -1,0 +1,22 @@
+@use "../../scss/mixins";
+@use "../../scss/vars";
+@use "../../scss/reset";
+
+.header{
+    @include mixins.Flex(row, space-evenly, center, 0);
+    padding: 24px 0;
+    &-logo{
+        @include mixins.Flex(row, center, center, 17px);
+        &__title{
+            color:vars.$button-color;
+            @include mixins.OpenSans(23px, 600, 31px);
+        }
+    }
+    &-btn{
+        color:vars.$text-color;
+        background-color: vars.$button-color;
+        padding: 15px 30px;
+        border-radius: 5px;
+        @include mixins.OpenSans(16px, 600, 22px);
+    }
+}
