@@ -1,0 +1,37 @@
+@use "../../scss/mixins";
+@use "../../scss/vars";
+@use "../../scss/reset";
+
+.main {
+    @include mixins.Flex(column, center, center, 32px);
+    width: 100%;
+    background-color: vars.$text-color;
+    &__title {
+        @include mixins.OpenSans(32px, 600, 150%);
+        text-align: center
+    }
+    &-form {
+        @include mixins.Flex(column, center, center, 16px);
+        width: 25%;
+        &__input {
+            width: 80%;
+            background-color: vars.$text-color;
+            padding: 10px 30px;
+            border-radius: 20px;
+        }
+        &__btn {
+            @include mixins.OpenSans(16px, 600, 150%);
+            color: vars.$text-color;
+            background-color: vars.$bg-color;
+            padding: 10px 20px;
+            border-radius: 20px;
+            width: 60%;
+        }
+        .error-message {
+            color: red;
+            font-size: 12px;
+            margin-top: 5px;
+          }
+    }
+
+}
